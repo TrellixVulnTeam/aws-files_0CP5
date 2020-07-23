@@ -1,0 +1,9 @@
+<h1>
+    {{ question.question_text }}</h1>
+<ul>
+    {% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }}</li>
+    {% endfor %}
+
+</ul>
+<a style="text-decoration:none;" href="https://7795162723c143bca736ab64cf77754e.vfs.cloud9.ap-southeast-1.amazonaws.com/polls">Go Back</a>

@@ -1,0 +1,262 @@
+import datetime
+import pytest
+from fb_post_v2.constants.enums import ReactionEnum
+from fb_post_v2.dtos.dtos import (
+    Userdto,
+    Postdto,
+    Commentsdto,
+    Reactionsdto,
+    PostReactionMetrics,
+    CommentReactionMetrics
+)
+
+
+@pytest.fixture
+def user_dtos():
+    user_dto = [
+        Userdto(
+            user_id=1,
+            name="John",
+            profile_pic="",
+            username='john'
+        ),
+        Userdto(
+            user_id=2,
+            name="Smith",
+            profile_pic="",
+            username='smith'
+        )
+    ]
+    return user_dto
+
+@pytest.fixture()
+def reaction_dtos():
+    reaction_dto = [
+        Reactionsdto(reaction_id=1,
+                     comment_id=None,
+                     post_id=1,
+                     user_id=1,
+                     reaction_type=ReactionEnum.HAHA),
+        Reactionsdto(reaction_id=2,
+                     comment_id=1,
+                     post_id=None,
+                     user_id=1,
+                     reaction_type=ReactionEnum.HAHA)
+    ]
+    return reaction_dto
+
+@pytest.fixture()
+def comment_dtos():
+    comment_dto = [
+        Commentsdto(
+            comment_id=1,
+            commenter_id=1,
+            post_id=1,
+            comment_content="nice post",
+            commented_at=datetime.datetime(2019, 4, 22, 0, 0),
+            parent_comment=None
+        ),
+        Commentsdto(
+            comment_id=2,
+            commenter_id=2,
+            post_id=None,
+            comment_content="nice post",
+            commented_at=datetime.datetime(2019, 4, 22, 0, 0),
+            parent_comment=1
+        )
+    ]
+    return comment_dto
+
+"""
+        Postdto(
+            posted_by_id=2,
+                post_content="My Post Content2",
+                posted_at=datetime.datetime(2019, 4, 22, 0, 0),
+                post_id=2
+)"""
+
+@pytest.fixture()
+def post_dto():
+    post_dtos = [
+        Postdto(
+            posted_by_id=1,
+            post_content="My Post Content",
+            posted_at=datetime.datetime(2019, 4, 22, 0, 0),
+            post_id=1
+        )
+    ]
+    return post_dtos
+
+@pytest.fixture()
+def replies_dtos():
+    replies_dto = [
+        Commentsdto(
+            comment_id=3,
+            commenter_id=1,
+            post_id=None,
+            parent_comment=1,
+            comment_content='nice',
+            commented_at=datetime.datetime(2019, 4, 22, 0, 0)
+        )
+    ]
+    return replies_dto
+
+@pytest.fixture()
+def post_reaction_metric_dto():
+    post_reaction_metric = PostReactionMetrics(
+            post_id=1,
+            reactions_count=1,
+            reaction_types=[ReactionEnum.HAHA],
+            comments_count=1
+        )
+    return post_reaction_metric
+
+@pytest.fixture()
+def posts_reaction_metric_dto():
+    post_reaction_metric = [PostReactionMetrics(
+            post_id=1,
+            reactions_count=1,
+            reaction_types=[ReactionEnum.HAHA],
+            comments_count=1
+        )
+    ]
+    return post_reaction_metric
+
+
+@pytest.fixture()
+def comment_reaction_metric_dto():
+    comment_reaction_metric = [
+        CommentReactionMetrics(
+            comment_id=1,
+            reactions_count=1,
+            reaction_types=[ReactionEnum.HAHA],
+            replies_count=1
+        ),
+        CommentReactionMetrics(
+            comment_id=2,
+            reactions_count=0,
+            reaction_types=[],
+            replies_count=0
+        )
+    ]
+    return comment_reaction_metric
+
+@pytest.fixture()
+def get_post_response():
+    get_post_details = {
+        'post_content': 'NEW POST',
+        'post_id': 1,
+        'posted_at': '13-12-2019,00:00:1568140200.00',
+        'posted_by': {
+            'name': 'James',
+            'profile_pic': '',
+            'user_id': 1
+        },
+        'reactions': {
+            'count': 1,
+            'type': [
+                'HAHA'
+            ]
+        },
+        'comments': [
+            {
+                'comment_content': 'nice post',
+                'comment_id': 1,
+                'commented_at': '13-12-2019,00:00:1568140200.00',
+                'commenter': {
+                    'name': 'James',
+                    'profile_pic': '',
+                    'user_id': 2
+                },
+                'reactions': {
+                    'count': 1,
+                    'type': [
+                        'SAD'
+                    ]
+                },
+                'replies': [
+                    {
+                        'comment_content': 'nice post',
+                        'comment_id': 2,
+                        'commented_at': '13-12-2019,00:00:1568140200.00',
+                        'commenter': {
+                            'name': 'James',
+                            'profile_pic': '',
+                            'user_id': 2
+                        }
+                    },
+                    {
+                        'count': 1,
+                        'type': [
+                            'WOW'
+                        ]
+                    }
+                ],
+                'replies_count': 1
+            }
+
+        ],
+        "comments_count": 1
+    }
+    return get_post_details
+
+
+@pytest.fixture()
+def get_user_posts_response():
+    get_user_posts_details = [{
+        'post_content': 'NEW POST',
+        'post_id': 1,
+        'posted_at': '13-12-2019,00:00:1568140200.00',
+        'posted_by': {
+            'name': 'James',
+            'profile_pic': '',
+            'user_id': 1
+        },
+        'reactions': {
+            'count': 1,
+            'type': [
+                'HAHA'
+            ]
+        },
+        'comments': [
+            {
+                'comment_content': 'nice post',
+                'comment_id': 1,
+                'commented_at': '13-12-2019,00:00:1568140200.00',
+                'commenter': {
+                    'name': 'James',
+                    'profile_pic': '',
+                    'user_id': 2
+                },
+                'reactions': {
+                    'count': 1,
+                    'type': [
+                        'SAD'
+                    ]
+                },
+                'replies': [
+                    {
+                        'comment_content': 'nice post',
+                        'comment_id': 2,
+                        'commented_at': '13-12-2019,00:00:1568140200.00',
+                        'commenter': {
+                            'name': 'James',
+                            'profile_pic': '',
+                            'user_id': 2
+                        }
+                    },
+                    {
+                        'count': 1,
+                        'type': [
+                            'WOW'
+                        ]
+                    }
+                ],
+                'replies_count': 1
+            }
+
+        ],
+        "comments_count": 1
+    }]
+    return get_user_posts_details
+

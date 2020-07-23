@@ -1,0 +1,6 @@
+Q1="""select count(*) from Movie where year = 1991;"""
+Q2="""select min(rank) from Movie;"""
+Q3="""select max(rank) from Movie where year = 2000;"""
+Q4="""select avg(rank) from Movie where year = 2000;"""
+Q5="""select year,count(*) from Movie group by year;"""
+Q6="""select min(year),max(year) from Movie;"""

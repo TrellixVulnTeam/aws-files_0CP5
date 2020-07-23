@@ -1,0 +1,226 @@
+************* Module tests.test_race_car_brakes
+tests/test_race_car_brakes.py:26: [C0301(line-too-long), ] Line too long (101/79)
+tests/test_race_car_brakes.py:48: [C0301(line-too-long), ] Line too long (102/79)
+tests/test_race_car_brakes.py:69: [C0301(line-too-long), ] Line too long (104/79)
+************* Module tests.test_race_car_encapsulation
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
+==tests.test_truck_load:104
+==tests.test_truck_unload:54
+==tests.test_truck_unload:81
+    max_speed = 5
+    acceleration = 4
+    tyre_friction = 3
+    max_cargo_weight = 100
+
+    truck = Truck(
+        color=color,
+        max_speed=max_speed,
+        acceleration=acceleration,
+        tyre_friction=tyre_friction,
+        max_cargo_weight=max_cargo_weight
+    )
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car:134
+==tests.test_race_car:168
+        max_speed=130,
+        acceleration=10,
+        tyre_friction=3
+    )
+    engine_started = False
+
+    # Act
+
+    # Assert
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
+==tests.test_truck:12
+==tests.test_truck_unload:59
+==tests.test_truck_unload:86
+    truck = Truck(
+        color=color,
+        max_speed=max_speed,
+        acceleration=acceleration,
+        tyre_friction=tyre_friction,
+        max_cargo_weight=max_cargo_weight
+    )
+
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
+==tests.test_truck:12
+==tests.test_truck_load:109
+==tests.test_truck_load:57
+==tests.test_truck_load:84
+    truck = Truck(
+        color=color,
+        max_speed=max_speed,
+        acceleration=acceleration,
+        tyre_friction=tyre_friction,
+        max_cargo_weight=max_cargo_weight
+    )
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 10 files
+==tests.test_car:118
+==tests.test_car:15
+==tests.test_car:44
+==tests.test_car:74
+==tests.test_car:96
+==tests.test_race_car:100
+==tests.test_race_car:123
+==tests.test_race_car:15
+==tests.test_race_car:46
+==tests.test_race_car:77
+        color=color,
+        max_speed=max_speed,
+        acceleration=acceleration,
+        tyre_friction=tyre_friction
+    )
+
+    # Assert
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car_accelerate:29
+==tests.test_race_car_acceleration:57
+        max_speed=20,
+        acceleration=10,
+        tyre_friction=5
+    )
+    start_engine_to_accelerate = "Start the engine to accelerate\n"
+
+    # Act
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car_sound:30
+==tests.test_race_car_sound:31
+        max_speed=130,
+        acceleration=10,
+        tyre_friction=3
+    )
+    start_engine_to_sound = "Start the engine to sound_horn\n"
+
+    # Act
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_race_car:14
+==tests.test_race_car_acceleration:31
+    race_car = RaceCar(
+        color=color,
+        max_speed=max_speed,
+        acceleration=acceleration,
+        tyre_friction=tyre_friction
+    )
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 6 files
+==tests.test_car:118
+==tests.test_car:15
+==tests.test_car:44
+==tests.test_car:74
+==tests.test_car:96
+==tests.test_race_car:39
+        color=color,
+        max_speed=max_speed,
+        acceleration=acceleration,
+        tyre_friction=tyre_friction
+    )
+
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_truck_brakes:31
+==tests.test_truck_sound:9
+        max_speed=5,
+        acceleration=4,
+        tyre_friction=3,
+        max_cargo_weight=1
+    )
+    truck.start_engine()
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
+==tests.test_truck_load:10
+==tests.test_truck_load:32
+==tests.test_truck_unload:10
+==tests.test_truck_unload:33
+        max_speed=5,
+        acceleration=4,
+        tyre_friction=3,
+        max_cargo_weight=100
+    )
+    truck.start_engine()
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car_brakes:34
+==tests.test_race_car_brakes:95
+        max_speed=20,
+        acceleration=9,
+        tyre_friction=10
+    )
+    current_speed_value = 0
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car_brakes:9
+==tests.test_race_car_brakes:9
+        max_speed=100,
+        acceleration=10,
+        tyre_friction=10
+    )
+    current_speed_value = 0
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car:15
+==tests.test_race_car_acceleration:32
+        color=color,
+        max_speed=max_speed,
+        acceleration=acceleration,
+        tyre_friction=tyre_friction
+    )
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 12 files
+==tests.test_car:118
+==tests.test_car:38
+==tests.test_car:44
+==tests.test_car:74
+==tests.test_car:96
+==tests.test_race_car:100
+==tests.test_race_car:123
+==tests.test_race_car:15
+==tests.test_race_car:39
+==tests.test_race_car:46
+==tests.test_race_car:77
+==tests.test_race_car_acceleration:32
+        color=color,
+        max_speed=max_speed,
+        acceleration=acceleration,
+        tyre_friction=tyre_friction
+    )
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car_accelerate:72
+==tests.test_race_car_acceleration:129
+        max_speed=30,
+        acceleration=10,
+        tyre_friction=5
+    )
+    current_speed_value = 30
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car_accelerate:49
+==tests.test_race_car_acceleration:77
+        max_speed=100,
+        acceleration=10,
+        tyre_friction=5
+    )
+    current_speed_value = 40
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 2 files
+==tests.test_car_accelerate:9
+==tests.test_race_car_acceleration:9
+        max_speed=20,
+        acceleration=10,
+        tyre_friction=5
+    )
+    current_speed_value = 10
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 3 files
+==tests.conftest:22
+==tests.test_truck_accelerate:30
+==tests.test_truck_accelerate:9
+        max_speed=1,
+        acceleration=1,
+        tyre_friction=1,
+        max_cargo_weight=1
+    )
+tests/test_race_car_encapsulation.py:1: [R0801(duplicate-code), ] Similar lines in 4 files
+==tests.test_truck:155
+==tests.test_truck_brakes:31
+==tests.test_truck_sound:31
+==tests.test_truck_sound:9
+        max_speed=5,
+        acceleration=4,
+        tyre_friction=3,
+        max_cargo_weight=1
+    )
+
+------------------------------------------------------------------
+Your code has been rated at 9.68/10 (previous run: 8.86/10, +0.82)
+

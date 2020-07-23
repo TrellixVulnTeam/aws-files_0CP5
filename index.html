@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Form</title>
+        <style>
+            .container {
+                /* margin-left: 25%;
+                margin-right: 25%;*/
+                margin: 30px 25% 0px 25%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <form action="action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                <table border='2'>
+                    <tr style="font-size:30px;">
+                        <th colspan='2'>Form</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            First name:
+                            <input type="text" value="">
+                        </td>
+                        <td>
+                            Last name:
+                            <input type="text" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="gender" value="male">Male
+                            <br>
+                            <input type="radio" name="gender" value="female">Female
+                        </td>
+                        <td>
+                            Date of Birth
+                            <input type="date" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Qualification
+                        </th>
+                        <td>
+                            <input type="checkbox">10th pass<br>
+                            <input type="checkbox">12th pass<br>
+                            <input type="checkbox">Graduate<br>
+                            <input type="checkbox">Post-Graduate
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color:
+                            <input type="color">
+                        </td>
+                        <td>Email:
+                            <input type="email"> </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            About you<br>
+                            <textarea style="width:430px; height:100px;">
+                        
+                    </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">
+                            0 <input type="range" id="a" name="a" value="">100<br> +
+                            <br>
+                            <input type="number" id="b" name="b" value="">
+                        </td>
+                        <td style="text-align:center;">
+                            <output name="x" for="a b"></output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan='2'>
+                            <input type="button" onclick="alert( 'Thank you') " value="Submit"></button>
+                            <input type="reset" value="Reset"></button>
+                        </th>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+
+</html>
